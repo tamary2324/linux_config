@@ -1,0 +1,25 @@
+
+{
+    "label" : "sleep",
+    "action" : "systemctl suspend",
+    "text" : "sleep",
+    "keybind" : "u"
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "Reboot",
+    "keybind" : "r"
+}
+{
+    "label" : "hibernate",
+    "action" : "sync && hyprlock --no-fade-in && systemctl hibernate",
+    "text" : "Hibernate",
+    "keybind" : "h"
+}
+{
+    "label" : "shutdown",
+    "action" : "hyprshutdown --vt 2 --post-cmd 'shutdown now'",
+    "text" : "Shutdown",
+    "keybind" : "s"
+}

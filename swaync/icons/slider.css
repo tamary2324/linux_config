@@ -1,0 +1,50 @@
+.widget-volume,
+.widget-backlight {
+  margin: 5px 0;
+  padding: 10px 14px 10px 14px;
+  background: var(--bg-widget);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-widget);
+}
+
+.widget-volume label,
+.widget-backlight label {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.widget-volume scale,
+.widget-backlight scale {
+  padding: 0 4px 0 4px;
+  color: #b8b6b6;
+}
+
+.widget-volume scale trough,
+.widget-backlight scale trough {
+  min-height: 8px;
+  background: var(--text-dim);
+  border: none;
+  border-radius: 6px;
+}
+
+.widget-volume scale trough highlight,
+.widget-backlight scale trough highlight {
+  background: #bab9b9;
+  border-radius: 6px;
+}
+
+.widget-volume scale slider,
+.widget-backlight scale slider {
+  min-width: 15px;
+  min-height: 15px;
+  background: var(--text-primary);
+  border: 0px solid var(--text-dim);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-dim);
+  transition: box-shadow var(--t-fast);
+  outline: none;
+}
+
+.widget-volume scale slider:hover,
+.widget-backlight scale slider:hover {
+  box-shadow: 0 0 16px var(--accent-hover);
+}

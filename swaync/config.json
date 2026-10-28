@@ -1,0 +1,84 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "time-format": "%H:%M",
+  "control-center-margin-top": 8,
+  "control-center-margin-bottom": 8,
+  "control-center-margin-right": 8,
+  "control-center-margin-left": 0,
+  "keyboard-shortcuts": true,
+  "control-center-height": 0,
+
+  "notifications": {
+    "notification-visibility": {},
+    "notification-window-width": 360,
+    "timeout": 6,
+    "timeout-low": 3,
+    "timeout-critical": 3,
+    "notification-icon-size": 34,
+    "image-visibility": "when-available",
+    "notification-body-image-height": 300,
+    "notification-body-image-width": 300,
+    "fit-to-screen": false,
+    "notification-icon": true,
+    "app-icon-size": 20,
+    "notification-close-button-position": "right"
+  },
+
+  "widgets": [
+    "title",
+    "dnd",
+    "mpris",
+    "volume",
+    "backlight",
+    "notifications"
+  ],
+
+  "widget-config": {
+    "title": {
+      "text": " Notifications",
+      "clear-all-button": true,
+      "button-text": " Clear"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "mpris": {
+      "image-size": 60,
+      "image-radius": 12,
+      "blur": true,
+      "show-player": "all",
+      "show-when-paused": true
+    },
+    "volume": {
+      "label": "󰕾 ",
+      "show-per-app": true
+    },
+    "backlight": {
+      "label": "󰃞 ",
+      "device": "nvidia_0"
+    }
+  },
+
+  "buttons-grid": {
+    "actions": [
+      {
+        "label": "",
+        "command": "swaync-client -cp; sleep 0.3; hyprctl dispatch exec 'path/to/your/screenshot.sh'"
+      },
+      {
+        "label": "󰹑",
+        "command": "swaync-client -cp; sleep 0.3; hyprctl dispatch exec 'path/to/your/record.sh'"
+      },
+      {
+        "label": "",
+        "command": "swaync-client -cp; sleep 0.3; hyprctl dispatch exec 'hyprpicker -a'"
+      },
+      {
+        "label": "󰪚",
+        "command": "swaync-client -cp; galculator"
+      }
+    ]
+  }
+}
