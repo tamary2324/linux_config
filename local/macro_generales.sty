@@ -1,0 +1,115 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{macro_generales}[2026/03/06 macro generales]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% package importing
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% math writing
+\RequirePackage{mathrsfs}
+\RequirePackage{amsfonts}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+
+% graphics
+% \RequirePackage{tikz}
+% \usetikzlibrary{arrows, shapes, positioning}
+% \usetikzlibrary{decorations.markings,decorations.pathmorphing,decorations.pathreplacing}
+% \usetikzlibrary{calc,patterns,shapes.geometric}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% macro math
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% écriture "normale" au sein d'une formule maths
+\newcommand{\letmath}[1]{\mathop{}\mathopen{}\mathrm{#1}}
+
+
+% parenthèsage
+
+% parenthèses adaptées à la taille du contenu
+\newcommand{\parenth}[1]{\left( #1 \right)}
+
+% valeur absolue
+\newcommand{\abs}[1]{\left| #1 \right|}
+
+% crochets adaptés à la taille du contenu
+\newcommand{\croch}[1]{\left[ #1 \right]}
+
+
+
+% intervals
+\newcommand{\intervalle}[4]{\mathopen{#1}#2
+                            \mathclose{}\mathpunct{};#3
+                            \mathclose{#4}}
+\newcommand{\intervalleff}[2]{\intervalle{[}{#1}{#2}{]}}
+\newcommand{\intervalleof}[2]{\intervalle{]}{#1}{#2}{]}}
+\newcommand{\intervallefo}[2]{\intervalle{[}{#1}{#2}{[}}
+\newcommand{\intervalleoo}[2]{\intervalle{]}{#1}{#2}{[}}
+
+% ensembles
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+
+
+
+% differencials and derivatives
+
+% d droit
+\newcommand{\diff}{\mathop{}\mathopen{}\mathrm{d}}
+
+% dérivée première
+% #1 fonction a dérivée
+% #2 variable de dérivation
+\newcommand{\df}[2][]{\frac{\diff #1}{\diff #2}}
+
+% dérivée seconde
+\newcommand{\dsf}[2][]{\frac{\diff^2 #1}{\diff #2^2}}
+
+
+% vecteur
+\renewcommand{\vec}[1]{\overrightarrow{#1}}
+
+% norme d'un vecteur
+\newcommand{\norme}[1]{\Vert #1 \Vert}
+
+% produit scalaire
+\newcommand{\pscal}[2]{#1 \cdot #2}
+
+% produit vectoriel
+\newcommand{\pvect}[2]{#1 \wedge #2}
+
+
+% vecteurs unitaires
+\newcommand{\ux}{\vec{u_x}}
+\newcommand{\uy}{\vec{u_y}}
+\newcommand{\uz}{\vec{u_z}}
+\newcommand{\ur}{\vec{u_r}}
+\newcommand{\utheta}{\vec{u_\theta}}
+
+
+% fois 10 puissance x
+\newcommand{\ee}[1]{\times 10^{#1}}  
+
+
+% trigonométrie
+\renewcommand{\cos}[1]{\letmath{cos} \parenth{#1}}
+\renewcommand{\sin}[1]{\letmath{sin} \parenth{#1}}
+\renewcommand{\tan}[1]{\letmath{tan} \parenth{#1}}
+\renewcommand{\arccos}[1]{\letmath{Arccos} \parenth{#1}}
+\renewcommand{\arcsin}[1]{\letmath{Arcsin} \parenth{#1}}
+\renewcommand{\arctan}[1]{\letmath{Arctan} \parenth{#1}}
+% exposant quelconque
+\newcommand{\ecos}[2]{\letmath{cos}^#1 \parenth{#2}}
+\newcommand{\esin}[2]{\letmath{sin}^#1 \parenth{#2}}
+\newcommand{\etan}[2]{\letmath{tan}^#1 \parenth{#2}}
+
+
+% log népérien
+\renewcommand{\ln}[1]{\letmath{ln} \parenth{#1}}
+
